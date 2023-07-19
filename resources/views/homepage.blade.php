@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-  <header class="mb-8 border-b">
+  <header class="mb-8 border-b sticky top-0 py-2 bg-white">
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
       <!-- logo - start -->
       <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <section id="home" class="mx-auto max-w-screen-2xl px-4 md:px-8">
+  <section id="home" class="mx-auto max-w-screen-2xl px-4 md:px-8 " >
     <div class="mb-8 flex flex-wrap justify-between md:mb-16 px-10">
       <div class="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
         <h2 class="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-5xl">ركايا آفاق واسعة<br />وإمكانيات عالية</h2>
@@ -51,7 +51,7 @@
     <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
     </div>
   </section>
-</div>
+
 
 
 
@@ -450,5 +450,6 @@
 
     <div class="py-8 text-center text-sm text-gray-400">© 2021 - Present Flowrift. All rights reserved.</div>
   </footer>
+</div>
 </div>
 @endsection
