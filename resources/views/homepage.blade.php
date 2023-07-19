@@ -165,177 +165,160 @@
     </div>
     <!-- text - end -->
 
-    <div class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-3 xl:gap-8">
-      <!-- article - start -->
-      <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-        <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-        </a>
-
-        <div class="flex flex-1 flex-col p-4 sm:p-6">
-          <h2 class="mb-2 text-lg font-semibold text-gray-800">
-            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">التخطيط الإستراتيجي</a>
-          </h2>
-
-          <p class="mb-8 text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+    <div class="grid gap-12 sm:grid-cols-2 xl:grid-cols-3 xl:gap-16">
+      <!-- feature - start -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
         </div>
+
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التخطيط الإستراتيجي</h3>
+        <div class="mb-2 text-center text-gray-500">
+          <ul>
+							<li>بناء استراتيجيات العمل</li>
+															<li>بناء خطط تنفيذ الاستراتيجيات</li>
+															<li>تصميم وتحليل الميزة التنافسية</li>
+															<li>بناء نموذج العمل</li>
+															<li>تصميم الرؤية والرسالة والقيم</li>
+															<li>تحديد الأهداف الاستراتيجية</li>
+															<li>تصميم المؤشرات الاستراتيجية</li>
+															<li>تصميم المبادرات الاستراتيجية</li>
+															<li>بناء الخطط التشغيلية</li>
+														</ul>
+</div>
       </div>
-      <!-- article - end -->
+      <!-- feature - end -->
 
-      <!-- article - start -->
-      <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-        <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-        </a>
-
-        <div class="flex flex-1 flex-col p-4 sm:p-6">
-          <h2 class="mb-2 text-lg font-semibold text-gray-800">
-            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">بناء قدرات الموارد البشرية</a>
-          </h2>
-
-          <p class="mb-8 text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
-
-          <div class="mt-auto flex items-end justify-between">
-            <div class="flex items-center gap-2">
-              <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1586116104126-7b8e839d5b8c?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by peter bucks" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <span class="block text-indigo-500">Jane Jackobs</span>
-                <span class="block text-sm text-gray-400">April 07, 2021</span>
-              </div>
-            </div>
-
-            <span class="rounded border px-2 py-1 text-sm text-gray-500">Article</span>
-          </div>
+      <!-- feature - start -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
         </div>
+
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">بناء قدرات الموارد البشرية</h3>
+        <div class="mb-2 text-center text-gray-500">
+        <ul>
+															<li>تصميم الهياكل التنظيمية</li>
+															<li>تصميم مؤشرات أداء الموظفين</li>
+															<li>تصميم وإدارة برامج التطوير القيادي</li>
+															<li>تصميم اللوائح الداخلية</li>
+															<li>بناء قدرات فريق العمل</li>
+															<li>تصميم وتشغيل عمليات الموارد البشرية</li>
+															<li>تصميم الأجور والبدلات والحوافز</li>
+															<li>تحليل الاحتياجات التدريبية</li>
+															<li>بناء الأوصاف الوظيفية</li>
+														</ul>
+</div>
       </div>
-      <!-- article - end -->
+      <!-- feature - end -->
 
-      <!-- article - start -->
-      <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-        <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-        </a>
-
-        <div class="flex flex-1 flex-col p-4 sm:p-6">
-          <h2 class="mb-2 text-lg font-semibold text-gray-800">
-            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">التميز المؤسسي</a>
-          </h2>
-
-          <p class="mb-8 text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
-
-          <div class="mt-auto flex items-end justify-between">
-            <div class="flex items-center gap-2">
-              <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1592660503155-7599a37f06a6?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Jassir Jonis" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <span class="block text-indigo-500">Tylor Grey</span>
-                <span class="block text-sm text-gray-400">March 15, 2021</span>
-              </div>
-            </div>
-
-            <span class="rounded border px-2 py-1 text-sm text-gray-500">Article</span>
-          </div>
+      <!-- feature - start -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
         </div>
+
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التميز المؤسسي</h3>
+        <div class="mb-2 text-center text-gray-500">
+        <ul>
+															<li>تحسين إجراءات العمل</li>
+															<li>تطوير أدلة السياسات و الإجراءات</li>
+															<li>تصميم مؤشرات قياس الأدا</li>
+															<li>تطبيق وتفعيل أنظمة الجودة</li>
+															<li>تحليل وتطوير أنظمة سلاسل الإمداد</li>
+															<li>تطبيق برامج ترشيد الإنفاق</li>
+															<li>تصميم مصفوفةالصلاحيات</li>
+															<li>تطبيق مشاريع اللين Lean</li>
+															<li>أتمتة إجراءات العمل</li>
+														</ul>
+</div>
       </div>
-      <!-- article - end -->
+      <!-- feature - end -->
 
-      <!-- article - start -->
-      <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-        <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-        </a>
-
-        <div class="flex flex-1 flex-col p-4 sm:p-6">
-          <h2 class="mb-2 text-lg font-semibold text-gray-800">
-            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">الإبداع وريادة الأعمال</a>
-          </h2>
-
-          <p class="mb-8 text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
-
-          <div class="mt-auto flex items-end justify-between">
-            <div class="flex items-center gap-2">
-              <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Aiony Haust" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <span class="block text-indigo-500">Ann Park</span>
-                <span class="block text-sm text-gray-400">January 27, 2021</span>
-              </div>
-            </div>
-
-            <span class="rounded border px-2 py-1 text-sm text-gray-500">Article</span>
-          </div>
+      <!-- feature - start -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
         </div>
+
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">الإبداع وريادة الأعمال</h3>
+        <div class="mb-2 text-center text-gray-500">
+        <ul>
+															<li>تحويل براءات الاختراع إلى مشاريع تجارية</li>
+															<li>تصميم خطط إطلاق المشاريع الصغيرة</li>
+															<li>تصميم خطط نمو المشاريع الصغيرة ومساعدة المشاريع المتعثرة</li>
+															<li>تصميم اللوائح الداخلية</li>
+															<li>التطوير القيادي</li>
+															<li>التخطيط الاستراتيجي</li>
+															<li>تصميم المؤشرات الاستراتيجي</li>
+															<li>تحديد الأهداف الاستراتيجية</li>
+															<li>تصميم وتحليل الميزة التنافسية</li>
+														</ul>
+</div>
       </div>
-      <!-- article - end -->
+      <!-- feature - end -->
 
-      <!-- article - start -->
-      <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-        <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-        </a>
-
-        <div class="flex flex-1 flex-col p-4 sm:p-6">
-          <h2 class="mb-2 text-lg font-semibold text-gray-800">
-            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">الخدمات الرقمية والتواصل الإجتماعي</a>
-          </h2>
-
-          <p class="mb-8 text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
-
-          <div class="mt-auto flex items-end justify-between">
-            <div class="flex items-center gap-2">
-              <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Aiony Haust" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <span class="block text-indigo-500">Ann Park</span>
-                <span class="block text-sm text-gray-400">January 27, 2021</span>
-              </div>
-            </div>
-
-            <span class="rounded border px-2 py-1 text-sm text-gray-500">Article</span>
-          </div>
+      <!-- feature - start -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
         </div>
+
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">الخدمات الرقمية والتواصل الاجتماعي</h3>
+        <div class="mb-2 text-center text-gray-500">
+        <ul>
+															<li>تأسيس الهوية البصرية</li>
+															<li>إدارة حسابات التواصل الاجتماعي</li>
+															<li>تجيهز محتوى للتواصل الاجتماعي</li>
+															<li>بناء دليل شامل للهوية البصرية</li>
+															<li>إدارة الحملات الإعلانية</li>
+														</ul>
+														<ul>
+															<li>تصميم موشن وايت بورد</li>
+															<li>تقديم الإستشارات للتسويق الرقمي</li>
+															<li>إنشاء خطط تسويقي</li>
+															<li>تحسين محركات البحث</li>
+														</ul>
+</div>
       </div>
-      <!-- article - end -->
+      <!-- feature - end -->
 
-      <!-- article - start -->
-      <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-        <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-        </a>
-
-        <div class="flex flex-1 flex-col p-4 sm:p-6">
-          <h2 class="mb-2 text-lg font-semibold text-gray-800">
-            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">خدمة الامتياز التجاري ( فرنشايز )</a>
-          </h2>
-
-          <p class="mb-8 text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
-
-          <div class="mt-auto flex items-end justify-between">
-            <div class="flex items-center gap-2">
-              <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Aiony Haust" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <span class="block text-indigo-500">Ann Park</span>
-                <span class="block text-sm text-gray-400">January 27, 2021</span>
-              </div>
-            </div>
-
-            <span class="rounded border px-2 py-1 text-sm text-gray-500">Article</span>
-          </div>
+      <!-- feature - start -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
         </div>
+
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">خدمة الامتياز التجاري (فرنشايز)</h3>
+        <div class="mb-2 text-center text-gray-500">
+        <ul>
+															<li>تقديم الملخص القانوني للإمتياز التجاري</li>
+															<li>تصميم المواصفات الإنشائية للمطاعم</li>
+															<li>تصميم دليل التشغيل</li>
+															<li>الخطة الاستراتيجية </li>
+															<li>تقديم ملف تدريبي </li>
+														</ul>
+														<ul>
+															<li>الخطة المالية التقديرية</li>
+															<li>الهوية البصرية</li>
+															<li>خطط تسويقية</li>
+															<li>الاستشارات الادارية</li>
+														</ul>
+</div>
       </div>
-      <!-- article - end -->
+      <!-- feature - end -->
     </div>
   </div>
 </div>
