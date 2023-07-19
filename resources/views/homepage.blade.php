@@ -2,8 +2,28 @@
 
 @section('content')
 
-<div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-  <header class="mb-8 border-b sticky top-0 py-2 bg-white">
+<style>
+  .background-animate {
+    background-size: 400%;
+
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+  }
+
+  @keyframes AnimationName {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+</style>
+
+<div class="pb-6 sm:pb-8 lg:pb-12">
+  <header class="sticky top-0 py-2 bg-zinc shadow-xl">
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
       <!-- logo - start -->
       <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
@@ -13,37 +33,43 @@
 
       <!-- nav - start -->
       <nav class="hidden gap-12 lg:flex 2xl:ml-16">
-        <a href="#home" class="text-lg font-semibold text-indigo-500">الصفحة الرئيسية</a>
-        <a href="#about" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">من نحن</a>
-        <a href="#values" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">قيمنا</a>
-        <a href="#services" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">خدماتنا</a>
+        <a href="#home" class="text-lg font-semibold text-brown">الصفحة الرئيسية</a>
+        <a href="#about" class="text-lg font-semibold text-brown transition duration-100 hover:text-gold active:text-gold">من نحن</a>
+        <a href="#values" class="text-lg font-semibold text-brown transition duration-100 hover:text-gold active:text-gold">قيمنا</a>
+        <a href="#services" class="text-lg font-semibold text-brown transition duration-100 hover:text-gold active:text-gold">خدماتنا</a>
       </nav>
       <!-- nav - end -->
 
       <!-- buttons - start -->
       <div class="hidden gap-8 lg:flex 2xl:ml-12">
-        <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">مستخدم جديد</a>
-        <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">تسجيل الدخول</a>
+        <a href="{{ route('register') }}" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-navy">مستخدم جديد</a>
+        <a href="{{ route('login') }}" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-navy">تسجيل الدخول</a>
       </div>
       <!-- buttons - end -->
     </div>
   </header>
 
-  <section id="home" class="mx-auto max-w-screen-2xl px-4 md:px-8 " >
-    <div class="mb-8 flex flex-wrap justify-between md:mb-16 px-10">
-      <div class="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
-        <h2 class="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-5xl">ركايا آفاق واسعة<br />وإمكانيات عالية</h2>
+  <section id="home" class="w-full
+    h-screen
+    bg-gradient-to-r
+    from-brown
+    via-brown
+    to-gold
+    background-animate max-w-screen-2xl px-4 md:px-8 h-full" >
+    <div class="flex flex-wrap justify-between px-10">
+      <div class="flex w-full flex-col justify-center items-center h-screen lg:w-1/3">
+        <h2 class="text-4xl font-bold text-white sm:text-5xl md:text-5xl">ركايا آفاق واسعة<br />وإمكانيات عالية</h2>
 
-        <p class="max-w-md leading-relaxed text-gray-500 xl:text-lg">Rakaya has broad horizons and high potential</p>
+        <p class="max-w-md leading-relaxed text-white xl:text-lg pt-3">Rakaya has broad horizons and high potential</p>
       </div>
 
-      <div class="mb-12 flex w-full md:mb-16 lg:w-2/3">
-        <div class="relative right-24 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:right-36 md:top-16 lg:ml-0">
-          <img src="https://images.unsplash.com/photo-1542340916-951bb72c8f74?auto=format&q=75&fit=crop&w=550&h=550" loading="lazy" alt="Photo by Kaung Htet" class="h-full w-full object-cover object-center" />
+      <div class="mb-12 flex w-full lg:w-2/3 mt-12">
+        <div class="relative h-96 right-24 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:right-36 md:top-16 lg:ml-0">
+          <img src="{{ URL::to('/assets/images/consulting 1.jpeg') }}" loading="lazy" alt="Photo by Kaung Htet" class="h-full w-full object-cover object-center" />
         </div>
 
-        <div class="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
-          <img src="https://images.unsplash.com/photo-1586295166487-b265f7e83a7f?auto=format&q=75&fit=crop&w=550&h=550" loading="lazy" alt="Photo by Manny Moreno" class="h-full w-full object-cover object-center" />
+        <div class="h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+          <img src="{{ URL::to('/assets/images/consulting2.jpeg') }}" loading="lazy" alt="Photo by Manny Moreno" class="h-full w-full object-cover object-center" />
         </div>
       </div>
     </div>
@@ -68,9 +94,9 @@
 
       <div class="md:pt-8">
 
-        <h1 class="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">من نحن</h1>
+        <h1 class="mb-4 text-center text-2xl font-bold text-brown sm:text-3xl md:mb-6 md:text-left">من نحن</h1>
 
-        <p class="mb-6 text-gray-500 sm:text-lg md:mb-8 text-justify">شركة سعودية متخصصة في تقديم الخدمات الإستشارية ، لتمكين القدرات في
+        <p class="mb-6 text-navy sm:text-lg md:mb-8 text-justify">شركة سعودية متخصصة في تقديم الخدمات الإستشارية ، لتمكين القدرات في
 المنظمات والمجتمعات على السعي نحو مواكبة العالم في التطور لجميع
 المجالات ، ولذلك نعمل مع عملاؤنا على تطوير منظماتهم ووضع لهم حلول
 ابتكارية للتعامل مع التحديات والمصاعب</p>
@@ -87,7 +113,7 @@
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">قيمنا</h2>
+      <h2 class="mb-4 text-center text-2xl font-bold text-brown md:mb-6 lg:text-3xl">قيمنا</h2>
 
     </div>
     <!-- text - end -->
@@ -101,8 +127,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">النزاهة</h3>
-        <p class="mb-2 text-center text-gray-500">نسعى دوما لنجاح عملاؤنا
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">النزاهة</h3>
+        <p class="mb-2 text-center text-zinc-400">نسعى دوما لنجاح عملاؤنا
 ونقدم النتائج لهم ونسعى
 جاهدين لتجاوز توقعاتهم</p>
       </div>
@@ -116,8 +142,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التمكين</h3>
-        <p class="mb-2 text-center text-gray-500">نعمل مع عملائنا جنبا لجنب
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">التمكين</h3>
+        <p class="mb-2 text-center text-zinc-400">نعمل مع عملائنا جنبا لجنب
 لتطوير الحلول سويا لضمان
 استدامة نجاح الحلول لديه</p>
       </div>
@@ -131,8 +157,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التركيز على العميل</h3>
-        <p class="mb-2 text-center text-gray-500">نعمل جاهدين على الوفاء بوعودنا
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">التركيز على العميل</h3>
+        <p class="mb-2 text-center text-zinc-400">نعمل جاهدين على الوفاء بوعودنا
 ونتبنى دور الشريك الثقة لتمكين
 عملاؤنا والعمل من المصلحة</p>
       </div>
@@ -146,8 +172,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التميز</h3>
-        <p class="mb-2 text-center text-gray-500">نسعى دوما للتحسين المستمر
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">التميز</h3>
+        <p class="mb-2 text-center text-zinc-400">نسعى دوما للتحسين المستمر
 من خلال البحث والتطوير وتقديم
 أفضل الحلول المناسبة</p>
       </div>
@@ -161,7 +187,7 @@
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">خدماتنا</h2>
+      <h2 class="mb-4 text-center text-2xl font-bold text-brown md:mb-6 lg:text-3xl">خدماتنا</h2>
     </div>
     <!-- text - end -->
 
@@ -174,20 +200,20 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التخطيط الإستراتيجي</h3>
-        <div class="mb-2 text-center text-gray-500">
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">التخطيط الإستراتيجي</h3>
+        <div class="mb-2 text-center text-zinc-400">
           <ul>
-							<li>بناء استراتيجيات العمل</li>
-															<li>بناء خطط تنفيذ الاستراتيجيات</li>
-															<li>تصميم وتحليل الميزة التنافسية</li>
-															<li>بناء نموذج العمل</li>
-															<li>تصميم الرؤية والرسالة والقيم</li>
-															<li>تحديد الأهداف الاستراتيجية</li>
-															<li>تصميم المؤشرات الاستراتيجية</li>
-															<li>تصميم المبادرات الاستراتيجية</li>
-															<li>بناء الخطط التشغيلية</li>
-														</ul>
-</div>
+						<li>بناء استراتيجيات العمل</li>
+						<li>بناء خطط تنفيذ الاستراتيجيات</li>
+						<li>تصميم وتحليل الميزة التنافسية</li>
+						<li>بناء نموذج العمل</li>
+						<li>تصميم الرؤية والرسالة والقيم</li>
+						<li>تحديد الأهداف الاستراتيجية</li>
+						<li>تصميم المؤشرات الاستراتيجية</li>
+						<li>تصميم المبادرات الاستراتيجية</li>
+						<li>بناء الخطط التشغيلية</li>
+					</ul>
+        </div>
       </div>
       <!-- feature - end -->
 
@@ -199,8 +225,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">بناء قدرات الموارد البشرية</h3>
-        <div class="mb-2 text-center text-gray-500">
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">بناء قدرات الموارد البشرية</h3>
+        <div class="mb-2 text-center text-zinc-400">
         <ul>
 															<li>تصميم الهياكل التنظيمية</li>
 															<li>تصميم مؤشرات أداء الموظفين</li>
@@ -224,8 +250,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">التميز المؤسسي</h3>
-        <div class="mb-2 text-center text-gray-500">
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">التميز المؤسسي</h3>
+        <div class="mb-2 text-center text-zinc-400">
         <ul>
 															<li>تحسين إجراءات العمل</li>
 															<li>تطوير أدلة السياسات و الإجراءات</li>
@@ -249,8 +275,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">الإبداع وريادة الأعمال</h3>
-        <div class="mb-2 text-center text-gray-500">
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">الإبداع وريادة الأعمال</h3>
+        <div class="mb-2 text-center text-zinc-400">
         <ul>
 															<li>تحويل براءات الاختراع إلى مشاريع تجارية</li>
 															<li>تصميم خطط إطلاق المشاريع الصغيرة</li>
@@ -274,8 +300,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">الخدمات الرقمية والتواصل الاجتماعي</h3>
-        <div class="mb-2 text-center text-gray-500">
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">الخدمات الرقمية والتواصل الاجتماعي</h3>
+        <div class="mb-2 text-center text-zinc-400">
         <ul>
 															<li>تأسيس الهوية البصرية</li>
 															<li>إدارة حسابات التواصل الاجتماعي</li>
@@ -301,8 +327,8 @@
           </svg>
         </div>
 
-        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl">خدمة الامتياز التجاري (فرنشايز)</h3>
-        <div class="mb-2 text-center text-gray-500">
+        <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-navy">خدمة الامتياز التجاري (فرنشايز)</h3>
+        <div class="mb-2 text-center text-zinc-400">
         <ul>
 															<li>تقديم الملخص القانوني للإمتياز التجاري</li>
 															<li>تصميم المواصفات الإنشائية للمطاعم</li>
@@ -329,7 +355,7 @@
   <div class="mx-auto max-w-screen-xl px-4 md:px-8">
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">فريق ركايا</h2>
+      <h2 class="mb-4 text-center text-2xl font-bold text-brown md:mb-6 lg:text-3xl">فريق ركايا</h2>
     </div>
     <!-- text - end -->
 
@@ -341,8 +367,8 @@
         </div>
 
         <div>
-          <div class="text-right font-bold text-indigo-500 sm:text-right md:text-lg">م. عمر خان</div>
-          <p class="text-right text-sm text-gray-500 sm:text-right md:text-base">مدير إدارة تقنية المعلومات</p>
+          <div class="text-right font-bold text-navy sm:text-right md:text-lg">م. عمر خان</div>
+          <p class="text-right text-sm text-zinc-400 sm:text-right md:text-base">مدير إدارة تقنية المعلومات</p>
         </div>
       </div>
       <!-- person - end -->
@@ -354,8 +380,8 @@
         </div>
 
         <div>
-          <div class="text-right font-bold text-indigo-500 sm:text-right md:text-lg">م. أسامة عبدالغني</div>
-          <p class="text-right text-sm text-gray-500 sm:text-right md:text-base">مهندس برمجيات</p>
+          <div class="text-right font-bold text-navy sm:text-right md:text-lg">م. أسامة عبدالغني</div>
+          <p class="text-right text-sm text-zinc-400 sm:text-right md:text-base">مهندس برمجيات</p>
         </div>
       </div>
       <!-- person - end -->
@@ -367,8 +393,8 @@
         </div>
 
         <div>
-          <div class="text-rigth font-bold text-indigo-500 sm:text-right md:text-lg">م. غيداء المغربي</div>
-          <p class="text-right text-sm text-gray-500 sm:text-right md:text-base">مهندسة برمجيات</p>
+          <div class="text-rigth font-bold text-navy sm:text-right md:text-lg">م. غيداء المغربي</div>
+          <p class="text-right text-sm text-zinc-400 sm:text-right md:text-base">مهندسة برمجيات</p>
         </div>
       </div>
       <!-- person - end -->
@@ -380,23 +406,23 @@
 
 <div class="bg-white py-6 sm:py-8 lg:py-12">
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <h2 class="mb-2 text-center text-2xl font-bold text-gray-800 lg:mb-0 lg:text-3xl py-10">شركاء نجاحنا</h2>
+      <h2 class="mb-2 text-center text-2xl font-bold text-brown lg:mb-0 lg:text-3xl py-10">شركاء نجاحنا</h2>
 
     <div class="grid grid-cols-2 gap-4 rounded-lg md:grid-cols-3 lg:gap-6">
       <!-- logo - start -->
-      <div class="flex h-16 items-center justify-center rounded-lg bg-gray-100 p-4 text-gray-400 sm:h-32">
+      <div class="flex h-16 items-center justify-center rounded-lg bg-zinc p-4 text-gray-400 sm:h-32">
         <img src="{{ URL::to('/assets/images/ektimal.png') }}" class="h-52"> 
       </div>
       <!-- logo - end -->
 
       <!-- logo - start -->
-      <div class="flex h-16 items-center justify-center rounded-lg bg-gray-100 p-4 text-gray-400 sm:h-32">
+      <div class="flex h-16 items-center justify-center rounded-lg bg-zinc p-4 text-gray-400 sm:h-32">
         <img src="{{ URL::to('/assets/images/etqan.png') }}" class="h-40"> 
       </div>
       <!-- logo - end -->
 
       <!-- logo - start -->
-      <div class="flex h-16 items-center justify-center rounded-lg bg-gray-100 p-4 text-gray-400 sm:h-32">
+      <div class="flex h-16 items-center justify-center rounded-lg bg-zinc p-4 text-gray-400 sm:h-32">
         <img src="{{ URL::to('/assets/images/rajhi.png') }}" class="h-16"> 
       </div>
       <!-- logo - end -->
