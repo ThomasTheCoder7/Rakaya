@@ -81,9 +81,9 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Our competitive advantage</h2>
+      <h2 class="mb-4 text-center text-2xl font-bold text-wine md:mb-6 lg:text-3xl">نعمل في إتقان الرقمية على</h2>
 
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+      <p class="mx-auto max-w-screen-md text-center text-gray md:text-lg">تقديم الحلول التقنية والأمنية التي تلبي احتياجات العميل، بدءًا في تقديم الحلول المناسبة لنجمع مع خبدتنا فرصًا أكبر لتحقيق النجاحات بكفاءة والوصول لرضا عملاءنا</p>
     </div>
     <!-- text - end -->
 
@@ -228,6 +228,35 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
         <h3 class="mb-2 text-center text-lg font-semibold md:text-xl text-darkgray">القطاع الصناعي</h3>
       </div>
       <!-- feature - end -->
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <h2 class="mb-2 text-center text-2xl font-bold text-wine lg:mb-0 lg:text-3xl py-10">شركاء نجاحنا</h2>
+
+    <div class="grid grid-cols-2 gap-4 rounded-lg md:grid-cols-3 lg:gap-6">
+      <!-- logo - start -->
+      <div class="flex h-16 items-center justify-center rounded-lg bg-lightgray p-4 text-gray-400 sm:h-32">
+        <img src="{{ URL::to('/assets/images/ektimal.png') }}" class="h-52"> 
+      </div>
+      <!-- logo - end -->
+
+      <!-- logo - start -->
+      <div class="flex h-16 items-center justify-center rounded-lg bg-lightgray p-4 text-gray-400 sm:h-32">
+        <img src="{{ URL::to('/assets/images/full.png') }}" class="h-20"> 
+      </div>
+      <!-- logo - end -->
+
+      <!-- logo - start -->
+      <div class="flex h-16 items-center justify-center rounded-lg bg-lightgray p-4 text-gray-400 sm:h-32">
+        <img src="{{ URL::to('/assets/images/rajhi.png') }}" class="h-16"> 
+      </div>
+      <!-- logo - end -->
+
     </div>
   </div>
 </div>
