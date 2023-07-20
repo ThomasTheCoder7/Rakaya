@@ -2,35 +2,54 @@
 
 @section('content')
 
+@extends('components.loginModal')
+@extends('components.registerModal')
 
 <div class="bg-lightgray pb-6 sm:pb-8 lg:pb-12 " id="home" style="background: rgb(62,62,63);
 background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rgba(106,106,107,1) 53%, rgba(148,148,148,1) 75%, rgba(181,181,181,1) 85%, rgba(220,220,220,1) 92%, rgba(242,241,241,1) 100%);">
-    <header class="sticky top-0 py-3 bg-zinc shadow-xl">
+  <header class="sticky top-0 py-3 bg-zinc shadow-xl">
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
       <!-- logo - start -->
-      <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
+      <a href="/" class="inline-flex items-center text-2xl font-bold text-black md:text-3xl" aria-label="logo">
         <img src="{{ URL::to('/assets/images/etqan.png') }}" class="w-32">
       </a>
       <!-- logo - end -->
 
       <!-- nav - start -->
       <nav class="hidden gap-12 lg:flex 2xl:ml-16 text-wine">
-        <a href="#home" class="text-lg font-semibold transition duration-100 hover:text-wine active:text-wine">الصفحة الرئيسية</a>
-        <a href="#about" class="text-lg font-semibold transition duration-100 hover:text-wine active:text-wine">من نحن</a>
-        <a href="#values" class="text-lg font-semibold transition duration-100 hover:text-wine active:text-wine">خدماتنا</a>
+        <a href="#home" class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray">الصفحة الرئيسية</a>
+        <a href="#about" class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray">من نحن</a>
+        <a href="#values" class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray">خدماتنا</a>
       </nav>
       <!-- nav - end -->
-
+      @guest
+      @if (Route::has('login'))
       <!-- buttons - start -->
       <div class="hidden gap-8 lg:flex 2xl:ml-12">
-        <a href="{{ route('register') }}" class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray">مستخدم جديد</a>
-        <a href="{{ route('login') }}" class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray">تسجيل الدخول</a>
+        <a  class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray" onclick="toggleModal('registerModal')">تسجيل مستخدم جديد</a>
+        <a class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray cursor-pointer	" onclick="toggleModal('loginModal')">تسجيل الدخول</a>
       </div>
+      @endif
       <!-- buttons - end -->
+      @else
+      <div class="hidden gap-8 lg:flex 2xl:ml-12">
+        <a href="{{ route('register') }}" class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray">{{Auth::user()->name}}</a>
+        <a class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();
+                                                     
+                                                     ">
+          تسجيل الخروج
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
+      </div>
+      @endguest
     </div>
   </header>
 
-  <section id="home" class="w-full max-w-screen-2xl px-4 md:px-8 h-full" >
+  <section id="home" class="w-full max-w-screen-2xl px-4 md:px-8 h-full">
     <div class="flex flex-wrap justify-between pr-10">
       <div class="flex w-full flex-col justify-center text-right h-screen lg:w-2/3">
         <h2 class="text-3xl font-bold text-lightgray sm:text-4xl md:text-5xl py-2">شركة إتقان الرقمية</h2>
@@ -50,8 +69,8 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
       </div>
     </div> -->
 
-    <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
-    </div>
+      <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+      </div>
   </section>
 </div>
 
@@ -236,24 +255,24 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
 
 <div class="bg-white py-6 sm:py-8 lg:py-12">
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <h2 class="mb-2 text-center text-2xl font-bold text-wine lg:mb-0 lg:text-3xl py-10">شركاء نجاحنا</h2>
+    <h2 class="mb-2 text-center text-2xl font-bold text-wine lg:mb-0 lg:text-3xl py-10">شركاء نجاحنا</h2>
 
     <div class="grid grid-cols-2 gap-4 rounded-lg md:grid-cols-3 lg:gap-6">
       <!-- logo - start -->
       <div class="flex h-16 items-center justify-center rounded-lg bg-lightgray p-4 text-gray-400 sm:h-32">
-        <img src="{{ URL::to('/assets/images/ektimal.png') }}" class="h-52"> 
+        <img src="{{ URL::to('/assets/images/ektimal.png') }}" class="h-52">
       </div>
       <!-- logo - end -->
 
       <!-- logo - start -->
       <div class="flex h-16 items-center justify-center rounded-lg bg-lightgray p-4 text-gray-400 sm:h-32">
-        <img src="{{ URL::to('/assets/images/full.png') }}" class="h-20"> 
+        <img src="{{ URL::to('/assets/images/full.png') }}" class="h-20">
       </div>
       <!-- logo - end -->
 
       <!-- logo - start -->
       <div class="flex h-16 items-center justify-center rounded-lg bg-lightgray p-4 text-gray-400 sm:h-32">
-        <img src="{{ URL::to('/assets/images/rajhi.png') }}" class="h-16"> 
+        <img src="{{ URL::to('/assets/images/rajhi.png') }}" class="h-16">
       </div>
       <!-- logo - end -->
 
@@ -305,5 +324,17 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
     <div class="py-8 text-center text-sm text-lightgray">© 2021 - Present Flowrift. All rights reserved.</div>
   </footer>
 </div>
+<script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
+@if($errors->has('email') || $errors->has('password')) 
+<script>
+const modal = localStorage.getItem('modal');
+console.log(modal)
 
+
+
+    toggleModal(modal)
+
+</script>
+@endif
 @endsection
+

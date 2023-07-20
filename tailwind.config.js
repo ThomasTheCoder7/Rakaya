@@ -6,8 +6,8 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
-        colors: {
+        extend: {        colors: {
+            black: "#000000",
             navy: "#243c4c",
             "zinc-200": "#e4e4e7",
             "zinc-400": "#a1a1aa",
@@ -21,7 +21,9 @@ module.exports = {
             lightgray: "#f2f1f1",
             pink: "#b07889",
             yellow: "#eeb13b",
-        },
+            
+        },},
+
     },
     plugins: [],
 };
