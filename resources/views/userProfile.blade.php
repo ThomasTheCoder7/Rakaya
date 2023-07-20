@@ -44,22 +44,23 @@
             حفظ
         </button>
     </form>
+</div>
 
 
-    <script>
-    function updateInfo() {
-        document.getElementById("name").disabled = false;
-        document.getElementById("email").disabled = false;
-        document.getElementById("save").disabled = false;
-    }
+<script>
+function updateInfo() {
+    document.getElementById("name").disabled = false;
+    document.getElementById("email").disabled = false;
+    document.getElementById("save").disabled = false;
+}
 
-    function saveInfo() {
-        // document.getElementById("name").disabled = true;
-        // document.getElementById("email").disabled = true;
-        // document.getElementById("save").disabled = true;
+function saveInfo() {
+    // document.getElementById("name").disabled = true;
+    // document.getElementById("email").disabled = true;
+    // document.getElementById("save").disabled = true;
 
-        // alret("تم حفظ تغييراتك");
-    }
-    </script>
+    // alret("تم حفظ تغييراتك");
+}
+</script>
 
-    @endsection
+@endsection
