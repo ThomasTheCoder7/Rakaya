@@ -12,16 +12,16 @@
         <div class="form-group py-3">
             <label for="name" class="text-sm font-medium text-wine pl-6"><strong>الاسم
                     الكامل</strong></label>
-            <input type="text" name="name" id="name"
+            <input type="text" name="name" id="name" pattern="[A-Za-z]*" disabled
                 class=" rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                value="{{Auth::user()->name}}" disabled>
+                value="{{Auth::user()->name}}">
         </div>
         <div class="form-group pb-3">
             <label for="email" class=" text-sm font-medium leading-6 text-wine pl-2"><strong>البريد
                     الالكتروني</strong></label>
-            <input type="text" name="email" id="email"
+            <input type="text" name="email" id="email" disabled
                 class=" rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                value="{{Auth::user()->email}}" disabled>
+                value="{{Auth::user()->email}}">
         </div>
         <button type="button" id="update"
             class="inline-flex items-center rounded-md bg-white ml-6 px-3 py-2 text-sm font-semibold text-gray shadow-sm ring-1 ring-inset ring-gray hover:wine">
@@ -52,15 +52,13 @@ document.getElementById("update").addEventListener("click", function() {
     document.getElementById("save").disabled = false;
 });
 
-document.getElementById("save").addEventListener("click", function() {
-    document.getElementById("name").disabled = true;
-    document.getElementById("email").disabled = true;
-    document.getElementById("save").disabled = true;
+// document.getElementById("save").addEventListener("click", function() {
+//     document.getElementById("name").disabled = true;
+//     document.getElementById("email").disabled = true;
+//     document.getElementById("save").disabled = true;
 
-    alert('تم حفظ معلوماتك بنجاح');
-});
-
-var desired = stringToReplace.replace(/[\u0000-\u007F][\W]/gi, '');
+//     alert('تم حفظ معلوماتك بنجاح');
+// });
 </script>
 
 @endsection
