@@ -2,8 +2,7 @@
 
 @section('content')
 
-@extends('components.loginModal')
-@extends('components.registerModal')
+
 
 <div class="bg-lightgray pb-6 sm:pb-8 lg:pb-12 " id="home" style="background: rgb(62,62,63);
 background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rgba(106,106,107,1) 53%, rgba(148,148,148,1) 75%, rgba(181,181,181,1) 85%, rgba(220,220,220,1) 92%, rgba(242,241,241,1) 100%);">
@@ -26,7 +25,7 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
       @if (Route::has('login'))
       <!-- buttons - start -->
       <div class="hidden gap-8 lg:flex 2xl:ml-12">
-        <a  class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray" onclick="toggleModal('registerModal')">تسجيل مستخدم جديد</a>
+        <a class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray" onclick="toggleModal('registerModal')">تسجيل مستخدم جديد</a>
         <a class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray cursor-pointer	" onclick="toggleModal('loginModal')">تسجيل الدخول</a>
       </div>
       @endif
@@ -325,16 +324,7 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
   </footer>
 </div>
 <script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
-@if($errors->has('email') || $errors->has('password')) 
-<script>
-const modal = localStorage.getItem('modal');
-console.log(modal)
-
-
-
-    toggleModal(modal)
-
-</script>
-@endif
+<script src="{{ URL::to('/assets/js/formsHandler.js') }}"></script>
 @endsection
-
+@extends('components.loginModal')
+@extends('components.registerModal')
