@@ -96,10 +96,10 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
 
 
 <div class="bg-white py-6 sm:py-8 lg:py-12">
-  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <!-- text - start -->
-    <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-wine md:mb-6 lg:text-3xl">نعمل في إتقان الرقمية على</h2>
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <!-- text - start -->
+        <div class="mb-10 md:mb-16">
+            <h2 class="mb-4 text-center text-2xl font-bold text-wine md:mb-6 lg:text-3xl">نعمل في إتقان الرقمية على</h2>
 
       <p class="mx-auto max-w-screen-md text-center text-gray md:text-lg">تقديم الحلول التقنية والأمنية التي تلبي احتياجات العميل، بدءًا في تقديم الحلول المناسبة لنجمع مع خبدتنا فرصًا أكبر لتحقيق النجاحات بكفاءة والوصول لرضا عملاءنا</p>
     </div>
@@ -142,8 +142,8 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
       </div>
       <!-- feature - end -->
 
+        </div>
     </div>
-  </div>
 </div>
 
 
@@ -325,6 +325,7 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
 </div>
 <script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
 <script src="{{ URL::to('/assets/js/formsHandler.js') }}"></script>
-@endsection
+
 @extends('components.loginModal')
 @extends('components.registerModal')
+@endsection
