@@ -4,7 +4,7 @@
 
 <x-header />
 <div class="flex items-center justify-content-center h-96">
-    <form action="/save" method="POST" class="">
+    <form action="/save" method="POST" class="" onsubmit>
         @csrf
         <div class=" sm:px-0">
             <h1 class="font-bold font-6xl text-darkgray">الملف الشخصي</h1>
@@ -12,8 +12,8 @@
         <div class="form-group py-3">
             <label for="name" class="text-sm font-medium text-wine pl-6"><strong>الاسم
                     الكامل</strong></label>
-            <input type="text" name="name" id="name" pattern="[A-Za-z]*" disabled
-                class=" rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            <input type="text" name="name" id="name" pattern="[A-Za-z]+" disabled
+                class="rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 value="{{Auth::user()->name}}">
         </div>
         <div class="form-group pb-3">
@@ -52,13 +52,13 @@ document.getElementById("update").addEventListener("click", function() {
     document.getElementById("save").disabled = false;
 });
 
-// document.getElementById("save").addEventListener("click", function() {
-//     document.getElementById("name").disabled = true;
-//     document.getElementById("email").disabled = true;
-//     document.getElementById("save").disabled = true;
+function submitForm() {
+    document.getElementById("name").disabled = true;
+    document.getElementById("email").disabled = true;
+    document.getElementById("save").disabled = true;
 
-//     alert('تم حفظ معلوماتك بنجاح');
-// });
+    alert('تم حفظ معلوماتك بنجاح');
+}
 </script>
 
 @endsection
