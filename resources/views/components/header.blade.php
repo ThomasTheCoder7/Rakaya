@@ -35,9 +35,7 @@
                 class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray">{{Auth::user()->name}}</a>
             <a class="text-lg font-semibold text-wine transition duration-100 hover:text-darkgray active:text-darkgray"
                 href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();
-                                                     
-                                                     ">
+                                                     document.getElementById('logout-form').submit();">
                 تسجيل الخروج
             </a>
 

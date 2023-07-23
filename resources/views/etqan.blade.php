@@ -285,14 +285,12 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
     </div>
 </div>
 
-<x-footer />
+
 <script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
 @if($errors->has('email') || $errors->has('password'))
 <script>
 const modal = localStorage.getItem('modal');
 console.log(modal)
-
-
 
 toggleModal(modal)
 </script>

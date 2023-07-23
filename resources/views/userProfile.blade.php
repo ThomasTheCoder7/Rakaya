@@ -23,9 +23,8 @@
                 class=" rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 value="{{Auth::user()->email}}" disabled>
         </div>
-        <button type="button"
-            class="inline-flex items-center rounded-md bg-white ml-6 px-3 py-2 text-sm font-semibold text-gray shadow-sm ring-1 ring-inset ring-gray hover:bg-wine"
-            onclick="updateInfo()">
+        <button type="button" id="update"
+            class="inline-flex items-center rounded-md bg-white ml-6 px-3 py-2 text-sm font-semibold text-gray shadow-sm ring-1 ring-inset ring-gray hover:wine">
             <svg class="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400 ml-2" viewBox="0 0 20 20" fill="currentColor"
                 aria-hidden="true">
                 <path
@@ -33,9 +32,8 @@
             </svg>
             تعديل البيانات الشخصية
         </button>
-        <button type="submit" id="save"
-            class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-            onclick="saveInfo()">
+        <button type="submit" id="save" disabled
+            class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">
             <svg class="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400 mx-2" viewBox="0 0 20 20" fill="currentColor"
                 aria-hidden="true">
                 <path
@@ -48,19 +46,21 @@
 
 
 <script>
-function updateInfo() {
+document.getElementById("update").addEventListener("click", function() {
     document.getElementById("name").disabled = false;
     document.getElementById("email").disabled = false;
     document.getElementById("save").disabled = false;
-}
+});
 
-function saveInfo() {
-    // document.getElementById("name").disabled = true;
-    // document.getElementById("email").disabled = true;
-    // document.getElementById("save").disabled = true;
+document.getElementById("save").addEventListener("click", function() {
+    document.getElementById("name").disabled = true;
+    document.getElementById("email").disabled = true;
+    document.getElementById("save").disabled = true;
 
-    // alret("تم حفظ تغييراتك");
-}
+    alert('تم حفظ معلوماتك بنجاح');
+});
+
+var desired = stringToReplace.replace(/[\u0000-\u007F][\W]/gi, '');
 </script>
 
 @endsection

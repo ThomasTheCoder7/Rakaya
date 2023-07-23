@@ -1,17 +1,6 @@
-<div class="  bg-wine b-0 ">
+<div class="bg-wine mt-auto">
     <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
         <div class="flex flex-col items-center pt-6">
-            <!-- nav - start -->
-            <nav class="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
-                <a href="#home"
-                    class="text-lightgray transition duration-100 hover:text-yellow active:text-yellow">الصفحة
-                    الرئيسية</a>
-                <a href="#about" class="text-lightgray transition duration-100 hover:text-yellow active:text-yellow">من
-                    نحن</a>
-                <a href="#services"
-                    class="text-lightgray transition duration-100 hover:text-yellow active:text-yellow">خدماتنا</a>
-            </nav>
-            <!-- nav - end -->
 
             <!-- social - start -->
             <div class="flex gap-4">
@@ -54,6 +43,6 @@
             <!-- social - end -->
         </div>
 
-        <div class="py-8 text-center text-sm text-lightgray">© 2021 - Present Flowrift. All rights reserved.</div>
+        <div class="py-8 text-center text-sm text-lightgray">جميع الحقوق محفوظة ©</div>
     </footer>
 </div>
