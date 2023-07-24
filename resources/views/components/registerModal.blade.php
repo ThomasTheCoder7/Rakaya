@@ -1,4 +1,4 @@
-<div id="registerModal" class="fixed z-10 inset-0 overflow-hidden bg-black bg-opacity-50 backdrop-blur-sm hidden">
+<div id="registerModal"  class="fixed z-10 inset-0 overflow-hidden bg-black bg-opacity-50 backdrop-blur-sm hidden">
     <div class="flex justify-center items-center min-h-screen pt-4 px-4 pb-8 sm:px-6 lg:px-8">
         <div class="modal-content w-full max-w-lg bg-white rounded-lg px-5 py-8 relative shadow-lg" id='registerFormModalBody'>
             <div class="modal-header text-center flex justify-center">

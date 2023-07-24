@@ -281,10 +281,11 @@ background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rg
         </div>
     </div>
 </div>
+@if(!Auth::check())
+@include('components.loginModal')
+@include('components.registerModal')
+@endif
 
-<script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
-<script src="{{ URL::to('/assets/js/formsHandler.js') }}"></script>
 
-@extends('components.loginModal')
-@extends('components.registerModal')
+
 @endsection

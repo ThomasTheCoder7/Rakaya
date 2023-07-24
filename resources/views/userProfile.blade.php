@@ -1,9 +1,8 @@
 @extends('layouts.guest')
-
 @section('content')
-
+@include('components.deleteUserModal')
 <x-header />
-<div class="flex items-center justify-content-center h-96">
+<div class="flex items-center justify-content-center h-96 flex-col">
     <form action="/save" method="POST" class="" id='userProfileForm'>
         @csrf
         <div class=" sm:px-0">
@@ -14,14 +13,16 @@
                     الكامل</strong></label>
             <input type="text" name="name" id="name" pattern="[A-Za-z]+" disabled
                 class="rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                value="{{Auth::user()->name}}">
+                value="{{Auth::user()->name}}"
+                >
         </div>
         <div class="form-group pb-3">
             <label for="email" class=" text-sm font-medium leading-6 text-wine pl-2"><strong>البريد
                     الالكتروني</strong></label>
             <input type="text" name="email" id="email" disabled
                 class=" rounded-md border-0 py-1.5 pl-3 pr-3 text-gray ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                value="{{Auth::user()->email}}">
+                value="{{Auth::user()->email}}"
+                >
         </div>
         <button type="button" id="update"
             class="inline-flex items-center rounded-md bg-white ml-6 px-3 py-2 text-sm font-semibold text-gray shadow-sm ring-1 ring-inset ring-gray hover:wine">
@@ -42,6 +43,10 @@
             حفظ
         </button>
     </form>
+    <div class="mt-5">
+    <button class="bg-red-500 px-7 py-2 text-bold text-white hover:bg-red-700 transition duration-300 rounded rounded-md" onclick="toggleModal('deleteUserModal')">حذف الحساب <i class="bi bi-trash-fill"></i></button>
+    </div>
+</div>  
 </div>
 
 
@@ -64,6 +69,8 @@ function submitForm(e) {
     alert('تم حفظ معلوماتك بنجاح');
     return true;
 }
+
+
 </script>
 
 @endsection

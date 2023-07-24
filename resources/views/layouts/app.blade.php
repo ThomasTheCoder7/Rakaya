@@ -22,7 +22,8 @@
 <body class="">
     <div id="app">
     </div>
-
+    <script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
+<script src="{{ URL::to('/assets/js/formsHandler.js') }}"></script>
 </body>
 
 

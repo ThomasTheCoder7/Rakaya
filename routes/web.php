@@ -19,10 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home', 'login', 'register');
 
 Route::get('/profile', function () {
     return view('userProfile');
-});
+})->middleware('auth');
+
+Route::delete('/profile/delete', [App\Http\Controllers\HomeController::class,'delete'])->name('profile.delete');
 
 Route::post('/save', [App\Http\Controllers\HomeController::class, 'save']);

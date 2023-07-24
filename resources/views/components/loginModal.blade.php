@@ -1,11 +1,10 @@
-
 <div id="loginModal" class="fixed z-10 inset-0 overflow-hidden bg-black bg-opacity-50 backdrop-blur-sm 
 hidden
 ">
     <div class="flex justify-center items-center min-h-screen pt-4 px-4 pb-8 sm:px-6 lg:px-8" id='loginFormModalBody'>
         <div class="modal-content w-full max-w-lg bg-white rounded-lg px-5 py-8 relative shadow-lg">
             <div class="modal-header text-center flex justify-center">
-                <h2 class="text-xl lg:text-4xl font-bold leading-6 text-wine font-bold  ">اهلا بعودتك 👋</h2>
+                <h2 class="text-xl lg:text-4xl font-bold leading-6 text-wine font-bold  ">اهلا بعودتك</h2>
                 <button type="button" class="absolute p-2  top-5 left-5" onclick="toggleModal('loginModal')">
                     <i class="bi bi-x-lg  text-wine text-xl  transition duartion-300 linear hover:text-rose-900"></i>
                 </button>

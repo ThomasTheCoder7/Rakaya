@@ -2,8 +2,10 @@ const nonErrorFields = ['remember', 'password_confirmation'];
 const headerMessages = ['These credentials do not match our records.', 'The email has already been taken.']
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById('registerForm');
+const deleteUserForm = document.getElementById('deleteUserForm')
 loginForm.addEventListener("submit", submitForm);
 registerForm.addEventListener("submit", submitForm);
+
 
 
 async function submitForm(event) {
@@ -28,7 +30,7 @@ async function submitForm(event) {
     }
 
     const request = await fetch(this.getAttribute("action"), {
-        method: "post",
+        method: this.getAttribute("method"),
         body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json",
@@ -45,6 +47,7 @@ async function submitForm(event) {
     //on failure
     const response = await request.json();
     shakeModal(document.getElementById(`${this.getAttribute('id')}ModalBody`));
+    console.log(response)
     if ("errors" in response) {
         const entries = Object.entries(response.errors);
         displayErrors(entries,this.getAttribute('id'));
