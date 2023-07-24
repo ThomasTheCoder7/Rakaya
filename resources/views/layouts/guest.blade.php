@@ -22,12 +22,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet" />
     <style>
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-        * {
-            font-family: 'Cairo', sans-serif;
-        }
-        
+    * {
+        font-family: 'Cairo', sans-serif;
+    }
     </style>
 
     <!-- Scripts -->
@@ -36,6 +35,7 @@
 </head>
 
 <body class="min-h-screen flex flex-col">
+    <x-header />
     <div id="app">
         <main>
             @yield('content')

@@ -25,6 +25,6 @@ Route::get('/profile', function () {
     return view('userProfile');
 })->middleware('auth');
 
-Route::delete('/profile/delete', [App\Http\Controllers\HomeController::class,'delete'])->name('profile.delete');
+Route::delete('/profile/delete', [App\Http\Controllers\HomeController::class, 'delete'])->name('profile.delete');
 
-Route::post('/save', [App\Http\Controllers\HomeController::class, 'save']);
+Route::post('/save', [App\Http\Controllers\HomeController::class, 'save'])->name('save');

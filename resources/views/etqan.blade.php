@@ -2,7 +2,6 @@
 
 @section('content')
 
-<x-header />
 <div class="bg-lightgray pb-6 sm:pb-8 lg:pb-12 " id="home"
     style="background: rgb(62,62,63);
 background: linear-gradient(50deg, rgba(62,62,63,1) 0%, rgba(94,94,95,1) 39%, rgba(106,106,107,1) 53%, rgba(148,148,148,1) 75%, rgba(181,181,181,1) 85%, rgba(220,220,220,1) 92%, rgba(242,241,241,1) 100%);">
