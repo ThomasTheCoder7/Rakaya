@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class HomeController extends Controller
 {
@@ -33,11 +34,12 @@ class HomeController extends Controller
     public function save(Request $request)
     {
         //validation rules
+        // dd($request);
         $request->validate([
             'name' => 'required|min:4|string|max:255',
             'email' => 'required|email|string|max:255',
             'avatar' => 'image',
-            'phone' => ['unique:users', 'regex:^5\d{8}$^'],
+            'phone' => ['regex:^5\d{8}$^', Rule::unique('users')->ignore(auth()->user()->id)],
             'user_type' => ['in:consultant,developer,client,intern'],
         ]);
         // if (!$request->hasFile('image')) {
