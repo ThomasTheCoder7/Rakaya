@@ -12,7 +12,7 @@ async function submitForm(event) {
     event.preventDefault();
     var token = null;
     const formId = this.getAttribute('id');
-    const inputs = this.querySelectorAll("input");
+    const inputs = this.querySelectorAll("input,select");
     const data = {};
     for (const input of inputs) {
         if (input.name == "_token") {
@@ -28,6 +28,7 @@ async function submitForm(event) {
         const value = input.value;
         data[name] = value;
     }
+    console.log(data)
 
     const request = await fetch(this.getAttribute("action"), {
         method: this.getAttribute("method"),
@@ -38,7 +39,6 @@ async function submitForm(event) {
             Accept: "application/json",
         },
     });
-    console.log(request.status);
     if (request.status === 204 || request.status === 201) {
         //on success
         window.location.reload();
@@ -46,8 +46,9 @@ async function submitForm(event) {
     }
     //on failure
     const response = await request.json();
-    shakeModal(document.getElementById(`${this.getAttribute('id')}ModalBody`));
+    this.scroll({top:0,behavior:'smooth'})
     console.log(response)
+    setTimeout(()=>shakeModal(document.getElementById(`${this.getAttribute('id')}ModalBody`)), 350);
     if ("errors" in response) {
         const entries = Object.entries(response.errors);
         displayErrors(entries,this.getAttribute('id'));

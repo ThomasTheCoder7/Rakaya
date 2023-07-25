@@ -18,7 +18,11 @@ return new class extends Migration {
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('avatar')->nullable();
+            $table->string('avatar')->default('/storage/app/public/avatars/default.jpg');
+            $table->string('phone')->unique();
+            $table->enum('gender', ['male', 'female']);
+            $table->enum('user_type', ['consultant', 'developer', 'client', 'intern']);
+
             $table->rememberToken();
             $table->timestamps();
         });

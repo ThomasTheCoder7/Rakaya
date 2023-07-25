@@ -2,7 +2,7 @@
 @section('content')
 @include('components.deleteUserModal')
 
-<div class="flex items-center justify-content-center h-screen flex-col">
+<div class="flex items-center justify-content-center h-full flex-col">
     
     <form action="{{route('save')}}" class="" id='userProfileForm' method="POST" enctype="multipart/form-data">
         @csrf
