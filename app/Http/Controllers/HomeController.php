@@ -64,7 +64,7 @@ class HomeController extends Controller
         return back()->with('message', 'Profile Updated');
     }
 
-    public function delete(Request $request)
+    public function destroy(Request $request)
     {
 
         $user = Auth::user();
