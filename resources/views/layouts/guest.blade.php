@@ -37,12 +37,14 @@
 <body class="min-h-screen flex flex-col">
     <x-header />
     <div id="app">
+
         <main>
             @yield('content')
         </main>
     </div>
     <script src="{{ URL::to('/assets/js/modalController.js') }}"></script>
     <script src="{{ URL::to('/assets/js/formsHandler.js') }}"></script>
+
     <x-footer />
 </body>
 
