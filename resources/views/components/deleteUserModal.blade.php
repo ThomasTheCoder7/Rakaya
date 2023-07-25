@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body text-center pt-3 mt-2">
-                <form action="{{route('profile.delete')}}" id='deleteUserForm'>
+                <form action="{{route('profile.destroy')}}" id='deleteUserForm'>
                     @csrf
                     @method('delete')
                     <div id='deleteUserFormErrorHeader'>
