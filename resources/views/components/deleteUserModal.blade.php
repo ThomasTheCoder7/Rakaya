@@ -79,13 +79,13 @@ async function submitForm(event) {
     }
     console.log(response);
     //on failure
-    shakeModal(document.getElementById(`${this.getAttribute('id')}ModalBody`));
+    shakeModal1(document.getElementById(`${this.getAttribute('id')}ModalBody`));
 
     document.getElementById('deleteUserFormErrorHeader').innerHTML = styledErrorHeader(response.errors)
 
 }
 
-const shakeModal = (modal) => {
+const shakeModal1 = (modal) => {
     modal.classList.add("shake");
     modal.addEventListener("animationend", () =>
         modal.classList.remove("shake")

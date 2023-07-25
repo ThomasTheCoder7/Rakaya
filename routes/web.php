@@ -25,9 +25,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home', 'login', 'register');
 
+// Route::get('/profile', function () {
+//     $user = Auth::user();
+//     return view('userProfile', compact('user'));
+// })->middleware('auth');
+
 Route::get('/profile', function () {
-    $user = Auth::user();
-    return view('userProfile', compact('user'));
+    return view('userProfile');
 })->middleware('auth');
 
 Route::delete('/profile/delete', [App\Http\Controllers\HomeController::class, 'destroy'])->name('profile.destroy');

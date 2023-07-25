@@ -36,7 +36,7 @@ class HomeController extends Controller
         $request->validate([
             'name' => 'required|min:4|string|max:255',
             'email' => 'required|email|string|max:255',
-            'avatar' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+            'avatar' => 'image'
         ]);
         // if (!$request->hasFile('image')) {
         //     $filename = $request->image->getClientOriginalName();
@@ -44,13 +44,13 @@ class HomeController extends Controller
         //     dd($request);
         //     User::find(1)->update(['avatar' => $filename]);
         // }
+        // dd($request);
         $user = Auth::user();
-
         if ($request->has('avatar')) {
-            $image = $request->file('avatar');
-            $name = Str::slug($user->id);
-            $folder = '/avatars';
-            $filePath = $folder . $name . '.' . $image->getClientOriginalExtension();
+            // $image = $request->file('avatar');
+            // $name = Str::slug($user->id);
+            // $folder = '/avatars';
+            // $filePath = $folder . $name . '.' . $image->getClientOriginalExtension();
             $path = Storage::disk('public')->putFileAs(
                 'avatars', $request->file('avatar'), $user->id . '.png'
             );
