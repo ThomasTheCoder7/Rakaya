@@ -1,4 +1,4 @@
- <header class="sticky top-0 py-3 bg-zinc shadow-xl">
+ <header class="fixed w-full top-0 py-3 bg-zinc shadow-xl">
      <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
          <!-- logo - start -->
          <a href="/" class="inline-flex items-center text-2xl font-bold text-black md:text-3xl" aria-label="logo">
@@ -12,7 +12,8 @@
                  class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray">الصفحة
                  الرئيسية</a>
              <a href="#about"
-                 class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray">من
+                 class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray"
+                 onclick="setPadding()">من
                  نحن</a>
              <a href="#values"
                  class="text-lg font-semibold transition duration-100 hover:text-darkgray active:text-darkgray">خدماتنا</a>
@@ -58,3 +59,11 @@
          @endguest
      </div>
  </header>
+
+ <script>
+function setPadding() {
+    var values = document.getElementById("values");
+    values.style.padding = "50px 0px 0px 0px";
+    console.log('hhh');
+}
+ </script>
