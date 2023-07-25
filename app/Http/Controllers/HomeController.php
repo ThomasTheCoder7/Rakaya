@@ -36,7 +36,9 @@ class HomeController extends Controller
         $request->validate([
             'name' => 'required|min:4|string|max:255',
             'email' => 'required|email|string|max:255',
-            'avatar' => 'image'
+            'avatar' => 'image',
+            'phone' => ['unique:users', 'regex:^5\d{8}$^'],
+            'user_type' => ['in:consultant,developer,client,intern'],
         ]);
         // if (!$request->hasFile('image')) {
         //     $filename = $request->image->getClientOriginalName();
@@ -60,6 +62,8 @@ class HomeController extends Controller
         // $filename = $user->email . 'avatar';
         $user->name = $request['name'];
         $user->email = $request['email'];
+        $user->phone = $request['phone'];
+        $user->user_type = $request['user_type'];
         $user->save();
         return back()->with('message', 'Profile Updated');
     }

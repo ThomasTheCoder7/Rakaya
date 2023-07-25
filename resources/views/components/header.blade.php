@@ -1,4 +1,4 @@
- <header class="fixed w-full top-0 py-3 bg-zinc shadow-xl">
+ <header class="sticky w-full top-0 py-3 bg-zinc shadow-xl">
      <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
          <!-- logo - start -->
          <a href="/" class="inline-flex items-center text-2xl font-bold text-black md:text-3xl" aria-label="logo">
